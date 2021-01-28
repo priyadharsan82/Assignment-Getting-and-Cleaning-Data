@@ -44,5 +44,5 @@ colnames(meanstd_df) <- cnames
 #creating the independent tidy data set with the average of each variable for each activity and each subject
 
 library(dplyr)
-final_df <-  meanstd_df %>% group_by(subjectid, activity) %>%summarize_each(mean)
+final_df <-  meanstd_df %>% group_by(subjectid, activity) %>% summarize_each(mean)
 write.table(final_df, file = "tidy_data.txt", row.names = FALSE)
